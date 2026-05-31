@@ -381,195 +381,68 @@ ${w}` : "").join(""); s(b)
       })
     }), e.hint && S.jsxs("div", { "code-path": "src/components/ChartAnalysisCard.tsx:100:9", className: "flex items-start gap-2 bg-[#F5F5F5] p-3 mt-6", children: [S.jsx(fi, { "code-path": "src/components/ChartAnalysisCard.tsx:101:11", className: "w-4 h-4 text-[#E84A2C] flex-shrink-0 mt-0.5" }), S.jsx("p", { "code-path": "src/components/ChartAnalysisCard.tsx:102:11", className: "text-sm text-[#666666]", children: e.hint })] })]
   })
-} function b5({ task: e, value: a, onChange: s }) { const o = [{ key: "s", label: "Strengths", title: "Сильні сторони", color: "bg-green-50 border-[#2E7D32]", headerColor: "bg-[#2E7D32] text-white" }, { key: "w", label: "Weaknesses", title: "Слабкі сторони", color: "bg-orange-50 border-orange-400", headerColor: "bg-orange-500 text-white" }, { key: "o", label: "Opportunities", title: "Можливості", color: "bg-blue-50 border-blue-400", headerColor: "bg-blue-500 text-white" }, { key: "t", label: "Threats", title: "Загрози", color: "bg-red-50 border-red-400", headerColor: "bg-red-500 text-white" }], l = f => { try { return JSON.parse(a || "{}")[f] || "" } catch { return "" } }, u = (f, h) => { try { const m = JSON.parse(a || "{}"); m[f] = h, s(JSON.stringify(m)) } catch { const m = {}; m[f] = h, s(JSON.stringify(m)) } }; return S.jsxs(le.div, { "code-path": "src/components/SWOTCard.tsx:42:5", initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: .3 }, className: "task-card p-6 sm:p-8", children: [S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:48:7", className: "mb-6", children: [S.jsx("span", { "code-path": "src/components/SWOTCard.tsx:49:9", className: "text-xs font-semibold text-[#E84A2C] uppercase tracking-wider", children: e.id.toUpperCase() }), S.jsx("h3", { "code-path": "src/components/SWOTCard.tsx:52:9", className: "text-xl font-bold text-[#1A1A1A] font-display mt-2", children: e.title }), e.description && S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:56:11", className: "text-[#666666] mt-2", children: e.description })] }), e.swotContext && S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:62:9", className: "bg-[#1A1A1A] text-white p-5 mb-6", children: [S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:63:11", className: "flex items-center gap-2 mb-3", children: [S.jsx(SN, { "code-path": "src/components/SWOTCard.tsx:64:13", className: "w-5 h-5 text-[#E84A2C]" }), S.jsx("span", { "code-path": "src/components/SWOTCard.tsx:65:13", className: "text-sm font-bold uppercase tracking-wider", children: "Контекст" })] }), S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:67:11", className: "text-[#E0E0E0] leading-relaxed", children: e.swotContext })] }), S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:72:7", className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: o.map(f => S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:74:11", className: `border ${f.color}`, children: [S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:75:13", className: `${f.headerColor} px-4 py-2 text-sm font-bold uppercase tracking-wider`, children: f.title }), S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:78:13", className: "p-4", children: S.jsx(di, { "code-path": "src/components/SWOTCard.tsx:79:15", value: l(f.key), onChange: h => u(f.key, h.target.value), placeholder: `Запишіть ${f.title.toLowerCase()}...`, className: "min-h-[100px] border-[#E0E0E0] rounded-none input-focus bg-white text-sm" }) })] }, f.key)) }), S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:91:7", className: "mt-6 border-t border-[#E0E0E0] pt-6", children: [S.jsx("label", { "code-path": "src/components/SWOTCard.tsx:92:9", className: "text-sm font-semibold text-[#1A1A1A] mb-3 block", children: "Синтез: Яку стратегію рекомендували б на основі SWOT-аналізу?" }), S.jsx(di, { "code-path": "src/components/SWOTCard.tsx:95:9", value: l("strategy"), onChange: f => u("strategy", f.target.value), placeholder: "Сформулюйте стратегічні напрями (SO, WO, ST, WT)...", className: "min-h-[80px] border-[#E0E0E0] rounded-none input-focus" })] }), e.hint && S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:104:9", className: "flex items-start gap-2 bg-[#F5F5F5] p-3 mt-4", children: [S.jsx(fi, { "code-path": "src/components/SWOTCard.tsx:105:11", className: "w-4 h-4 text-[#E84A2C] flex-shrink-0 mt-0.5" }), S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:106:11", className: "text-sm text-[#666666]", children: e.hint })] })] }) } function S5({ task: e, value: a = "", onChange: s }) {
-  const [o, l] = x.useState([]);
+} function b5({ task: e, value: a, onChange: s }) { const o = [{ key: "s", label: "Strengths", title: "Сильні сторони", color: "bg-green-50 border-[#2E7D32]", headerColor: "bg-[#2E7D32] text-white" }, { key: "w", label: "Weaknesses", title: "Слабкі сторони", color: "bg-orange-50 border-orange-400", headerColor: "bg-orange-500 text-white" }, { key: "o", label: "Opportunities", title: "Можливості", color: "bg-blue-50 border-blue-400", headerColor: "bg-blue-500 text-white" }, { key: "t", label: "Threats", title: "Загрози", color: "bg-red-50 border-red-400", headerColor: "bg-red-500 text-white" }], l = f => { try { return JSON.parse(a || "{}")[f] || "" } catch { return "" } }, u = (f, h) => { try { const m = JSON.parse(a || "{}"); m[f] = h, s(JSON.stringify(m)) } catch { const m = {}; m[f] = h, s(JSON.stringify(m)) } }; return S.jsxs(le.div, { "code-path": "src/components/SWOTCard.tsx:42:5", initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: .3 }, className: "task-card p-6 sm:p-8", children: [S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:48:7", className: "mb-6", children: [S.jsx("span", { "code-path": "src/components/SWOTCard.tsx:49:9", className: "text-xs font-semibold text-[#E84A2C] uppercase tracking-wider", children: e.id.toUpperCase() }), S.jsx("h3", { "code-path": "src/components/SWOTCard.tsx:52:9", className: "text-xl font-bold text-[#1A1A1A] font-display mt-2", children: e.title }), e.description && S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:56:11", className: "text-[#666666] mt-2", children: e.description })] }), e.swotContext && S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:62:9", className: "bg-[#1A1A1A] text-white p-5 mb-6", children: [S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:63:11", className: "flex items-center gap-2 mb-3", children: [S.jsx(SN, { "code-path": "src/components/SWOTCard.tsx:64:13", className: "w-5 h-5 text-[#E84A2C]" }), S.jsx("span", { "code-path": "src/components/SWOTCard.tsx:65:13", className: "text-sm font-bold uppercase tracking-wider", children: "Контекст" })] }), S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:67:11", className: "text-[#E0E0E0] leading-relaxed", children: e.swotContext })] }), S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:72:7", className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: o.map(f => S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:74:11", className: `border ${f.color}`, children: [S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:75:13", className: `${f.headerColor} px-4 py-2 text-sm font-bold uppercase tracking-wider`, children: f.title }), S.jsx("div", { "code-path": "src/components/SWOTCard.tsx:78:13", className: "p-4", children: S.jsx(di, { "code-path": "src/components/SWOTCard.tsx:79:15", value: l(f.key), onChange: h => u(f.key, h.target.value), placeholder: `Запишіть ${f.title.toLowerCase()}...`, className: "min-h-[100px] border-[#E0E0E0] rounded-none input-focus bg-white text-sm" }) })] }, f.key)) }), S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:91:7", className: "mt-6 border-t border-[#E0E0E0] pt-6", children: [S.jsx("label", { "code-path": "src/components/SWOTCard.tsx:92:9", className: "text-sm font-semibold text-[#1A1A1A] mb-3 block", children: "Синтез: Яку стратегію рекомендували б на основі SWOT-аналізу?" }), S.jsx(di, { "code-path": "src/components/SWOTCard.tsx:95:9", value: l("strategy"), onChange: f => u("strategy", f.target.value), placeholder: "Сформулюйте стратегічні напрями (SO, WO, ST, WT)...", className: "min-h-[80px] border-[#E0E0E0] rounded-none input-focus" })] }), e.hint && S.jsxs("div", { "code-path": "src/components/SWOTCard.tsx:104:9", className: "flex items-start gap-2 bg-[#F5F5F5] p-3 mt-4", children: [S.jsx(fi, { "code-path": "src/components/SWOTCard.tsx:105:11", className: "w-4 h-4 text-[#E84A2C] flex-shrink-0 mt-0.5" }), S.jsx("p", { "code-path": "src/components/SWOTCard.tsx:106:11", className: "text-sm text-[#666666]", children: e.hint })] })] }) } function S5({ task: e, value: a, onChange: s }) {
+  const [o, l] = x.useState([]), u = (e.options || (e.methods ? e.methods.map(m => typeof m === "string" ? m : { value: m.name || m.label || m.title || "", label: m.name || m.label || m.title || "", description: m.description || "", bestFor: m.bestFor || "" }) : [])).map(m => typeof m === "string" ? { value: m, label: m, description: "", bestFor: "" } : { value: m.value || m.name || m.label || m.title || "", label: m.label || m.name || m.value || m.title || "", description: m.description || "", bestFor: m.bestFor || "" }), f = m => {
+    const p = o.includes(m) ? o.filter(T => T !== m) : [...o, m]; l(p); const b = (a || "").split(`
 
-  const u = e.methods
-    ? e.methods.map(m => ({
-        id: m.id || m.name,
-        value: m.name,
-        label: m.name,
-        description: m.description || "",
-        bestFor: m.bestFor || ""
-      }))
-    : (e.options || []).map(m =>
-        typeof m === "string"
-          ? {
-              id: m,
-              value: m,
-              label: m,
-              description: "",
-              bestFor: ""
-            }
-          : {
-              id: m.id || m.label || m.name,
-              value: m.label || m.name,
-              label: m.label || m.name,
-              description: m.description || "",
-              bestFor: m.bestFor || ""
-            }
-      );
+[МЕТОДИ:]`)[0] || "", w = p.length > 0 ? `
 
-  const f = m => {
-    const p = o.includes(m.value)
-      ? o.filter(T => T !== m.value)
-      : [...o, m.value];
+[МЕТОДИ:] `+ p.join(", ") : ""; s(b + w)
+  }, h = () => a.split(`
 
-    l(p);
-
-    const b = (a || "").split("\n\n[МЕТОДИ:]")[0] || "";
-    const w = p.length > 0 ? "\n\n[МЕТОДИ:] " + p.join(", ") : "";
-
-    s(b + w);
-  };
-
-  const h = () => (a || "").split("\n\n[МЕТОДИ:]")[0] || "";
-
-  return S.jsxs(le.div, {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: .3 },
-    className: "task-card p-6 sm:p-8",
-    children: [
-      S.jsxs("div", {
-        className: "mb-6",
-        children: [
-          S.jsx("span", {
-            className: "text-xs font-semibold text-[#E84A2C] uppercase tracking-wider",
-            children: e.id.toUpperCase()
-          }),
-          S.jsx("h3", {
-            className: "text-xl font-bold text-[#1A1A1A] font-display mt-2",
-            children: e.title
-          }),
-          e.description && S.jsx("p", {
-            className: "text-[#666666] mt-2",
-            children: e.description
-          })
-        ]
-      }),
-
-      S.jsxs("div", {
-        className: "mb-6",
-        children: [
-          S.jsxs("div", {
-            className: "flex items-center gap-2 mb-4",
-            children: [
-              S.jsx(TN, {
-                className: "w-4 h-4 text-[#1A1A1A]"
-              }),
-              S.jsx("span", {
-                className: "text-sm font-semibold text-[#1A1A1A]",
-                children: e.selectionLabel || "Оберіть методи, які найкраще підходять для вашого дослідження (можна кілька):"
-              })
-            ]
-          }),
-
-          u.length > 0 ? S.jsx("div", {
-            className: "grid grid-cols-1 sm:grid-cols-2 gap-2",
-            children: u.map(m => S.jsxs("button", {
-              type: "button",
-              onClick: () => f(m),
-              className: `
+[МЕТОДИ:]`)[0] || ""; return S.jsxs(le.div, {
+    "code-path": "src/components/MethodSelectionCard.tsx:35:5", initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: .3 }, className: "task-card p-6 sm:p-8", children: [S.jsxs("div", { "code-path": "src/components/MethodSelectionCard.tsx:41:7", className: "mb-6", children: [S.jsx("span", { "code-path": "src/components/MethodSelectionCard.tsx:42:9", className: "text-xs font-semibold text-[#E84A2C] uppercase tracking-wider", children: e.id.toUpperCase() }), S.jsx("h3", { "code-path": "src/components/MethodSelectionCard.tsx:45:9", className: "text-xl font-bold text-[#1A1A1A] font-display mt-2", children: e.title }), e.description && S.jsx("p", { "code-path": "src/components/MethodSelectionCard.tsx:49:11", className: "text-[#666666] mt-2", children: e.description })] }), S.jsxs("div", {
+      "code-path": "src/components/MethodSelectionCard.tsx:54:7", className: "mb-6", children: [S.jsxs("div", { "code-path": "src/components/MethodSelectionCard.tsx:55:9", className: "flex items-center gap-2 mb-4", children: [S.jsx(TN, { "code-path": "src/components/MethodSelectionCard.tsx:56:11", className: "w-4 h-4 text-[#1A1A1A]" }), S.jsx("span", { "code-path": "src/components/MethodSelectionCard.tsx:57:11", className: "text-sm font-semibold text-[#1A1A1A]", children: "Оберіть методи, які найкраще підходять для вашого дослідження (можна кілька):" })] }), S.jsx("div", {
+        "code-path": "src/components/MethodSelectionCard.tsx:61:9", className: "grid grid-cols-1 sm:grid-cols-2 gap-2", children: u.map(m => S.jsxs("button", {
+  "code-path": "src/components/MethodSelectionCard.tsx:63:13",
+  onClick: () => f(m.value),
+  className: `
                 flex items-start gap-2 p-3 border-2 text-left transition-all duration-200
                 ${o.includes(m.value) ? "border-[#E84A2C] bg-[#E84A2C]/5" : "border-[#E0E0E0] hover:border-[#999] hover:bg-[#F5F5F5]"}
               `,
-              children: [
-                S.jsx("div", {
-                  className: `
-                    w-4 h-4 border flex-shrink-0 flex items-center justify-center mt-0.5
-                    ${o.includes(m.value) ? "border-[#E84A2C] bg-[#E84A2C]" : "border-[#999]"}
-                  `,
-                  children: o.includes(m.value) && S.jsx(uc, {
-                    className: "w-3 h-3 text-white"
-                  })
-                }),
-                S.jsxs("div", {
-                  className: "space-y-1",
-                  children: [
-                    S.jsx("span", {
-                      className: `text-sm block ${o.includes(m.value) ? "font-semibold text-[#1A1A1A]" : "text-[#1A1A1A]"}`,
-                      children: m.label
-                    }),
-                    m.description && S.jsx("p", {
-                      className: "text-xs text-[#666666] leading-relaxed",
-                      children: m.description
-                    }),
-                    m.bestFor && S.jsxs("p", {
-                      className: "text-xs text-[#666666] leading-relaxed italic",
-                      children: ["Доцільно для: ", m.bestFor]
-                    })
-                  ]
-                })
-              ]
-            }, m.id))
-          }) : S.jsx("div", {
-            className: "border border-[#E0E0E0] bg-[#F5F5F5] p-4 text-sm text-[#666666]",
-            children: "Для цього завдання не задано варіантів вибору."
-          })
-        ]
-      }),
-
-      o.length > 0 && S.jsxs(le.div, {
-        initial: { opacity: 0, y: 10 },
-        animate: { opacity: 1, y: 0 },
-        className: "bg-[#E84A2C]/5 border border-[#E84A2C] p-4 mb-6",
-        children: [
-          S.jsx("p", {
-            className: "text-sm font-semibold text-[#1A1A1A] mb-2",
-            children: e.selectedLabel || "Обрані методи:"
-          }),
-          S.jsx("div", {
-            className: "flex flex-wrap gap-2",
-            children: o.map(m => S.jsx("span", {
-              className: "bg-[#E84A2C] text-white text-xs px-2 py-1 font-semibold",
-              children: m
-            }, m))
-          })
-        ]
-      }),
-
-      S.jsxs("div", {
-        className: "mb-4",
-        children: [
-          S.jsxs("div", {
-            className: "flex items-center gap-2 mb-3",
-            children: [
-              S.jsx(cc, {
-                className: "w-4 h-4 text-[#1A1A1A]"
-              }),
-              S.jsx("label", {
-                className: "text-sm font-semibold text-[#1A1A1A]",
-                children: e.justificationLabel || "Обґрунтування вибору методів: чому саме ці методи відповідають вашій темі?"
-              })
-            ]
-          }),
-          S.jsx(di, {
-            value: h(),
-            onChange: m => {
-              const p = o.length > 0 ? "\n\n[МЕТОДИ:] " + o.join(", ") : "";
-              s(m.target.value + p);
-            },
-            placeholder: e.justificationPlaceholder || "Поясніть, як кожен обраний метод допоможе вирішити конкретні завдання дослідження...",
-            className: "min-h-[120px] border-[#E0E0E0] rounded-none input-focus"
-          })
-        ]
-      }),
-
-      e.hint && S.jsxs("div", {
-        className: "flex items-start gap-2 bg-[#F5F5F5] p-3",
-        children: [
-          S.jsx(fi, {
-            className: "w-4 h-4 text-[#E84A2C] flex-shrink-0 mt-0.5"
-          }),
-          S.jsx("p", {
-            className: "text-sm text-[#666666]",
-            children: e.hint
-          })
-        ]
+  children: [
+    S.jsx("div", {
+      "code-path": "src/components/MethodSelectionCard.tsx:74:15",
+      className: `
+                w-4 h-4 border flex-shrink-0 flex items-center justify-center mt-0.5
+                ${o.includes(m.value) ? "border-[#E84A2C] bg-[#E84A2C]" : "border-[#999]"}
+              `,
+      children: o.includes(m.value) && S.jsx(uc, {
+        "code-path": "src/components/MethodSelectionCard.tsx:79:19",
+        className: "w-3 h-3 text-white"
       })
-    ]
-  });
+    }),
+    S.jsxs("div", {
+      className: "space-y-1",
+      children: [
+        S.jsx("span", {
+          "code-path": "src/components/MethodSelectionCard.tsx:82:15",
+          className: `text-sm block ${o.includes(m.value) ? "font-semibold text-[#1A1A1A]" : "text-[#1A1A1A]"}`,
+          children: m.label
+        }),
+        m.description && S.jsx("p", {
+          className: "text-sm text-[#666666] leading-relaxed",
+          children: m.description
+        }),
+        m.bestFor && S.jsxs("p", {
+          className: "text-sm text-[#666666] leading-relaxed italic",
+          children: ["Доцільно для: ", m.bestFor]
+        })
+      ]
+    })
+  ]
+}, m.value))
+      })]
+    }), o.length > 0 && S.jsxs(le.div, { "code-path": "src/components/MethodSelectionCard.tsx:92:9", initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, className: "bg-[#E84A2C]/5 border border-[#E84A2C] p-4 mb-6", children: [S.jsx("p", { "code-path": "src/components/MethodSelectionCard.tsx:97:11", className: "text-sm font-semibold text-[#1A1A1A] mb-2", children: "Обрані методи:" }), S.jsx("div", { "code-path": "src/components/MethodSelectionCard.tsx:98:11", className: "flex flex-wrap gap-2", children: o.map(m => S.jsx("span", { "code-path": "src/components/MethodSelectionCard.tsx:100:15", className: "bg-[#E84A2C] text-white text-xs px-2 py-1 font-semibold", children: m }, m)) })] }), S.jsxs("div", {
+      "code-path": "src/components/MethodSelectionCard.tsx:109:7", className: "mb-4", children: [S.jsxs("div", { "code-path": "src/components/MethodSelectionCard.tsx:110:9", className: "flex items-center gap-2 mb-3", children: [S.jsx(cc, { "code-path": "src/components/MethodSelectionCard.tsx:111:11", className: "w-4 h-4 text-[#1A1A1A]" }), S.jsx("label", { "code-path": "src/components/MethodSelectionCard.tsx:112:11", className: "text-sm font-semibold text-[#1A1A1A]", children: "Обґрунтування вибору методів: чому саме ці методи відповідають вашій темі?" })] }), S.jsx(di, {
+        "code-path": "src/components/MethodSelectionCard.tsx:116:9", value: h(), onChange: m => {
+          const p = o.length > 0 ? `
+
+[МЕТОДИ:] `+ o.join(", ") : ""; s(m.target.value + p)
+        }, placeholder: "Поясніть, як кожен обраний метод допоможе вирішити конкретні завдання дослідження...", className: "min-h-[120px] border-[#E0E0E0] rounded-none input-focus"
+      })]
+    }), e.hint && S.jsxs("div", { "code-path": "src/components/MethodSelectionCard.tsx:128:9", className: "flex items-start gap-2 bg-[#F5F5F5] p-3", children: [S.jsx(fi, { "code-path": "src/components/MethodSelectionCard.tsx:129:11", className: "w-4 h-4 text-[#E84A2C] flex-shrink-0 mt-0.5" }), S.jsx("p", { "code-path": "src/components/MethodSelectionCard.tsx:130:11", className: "text-sm text-[#666666]", children: e.hint })] })]
+  })
 }
   function SourceMatrixTable({ task: e, value: a = "", onChange: s }) {
   const [o, l] = x.useState(!1);
